@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Forest Flame</title>
+
+    <style>
+        body {
+            margin: 0;
+            min-height: 100vh;
+            font-family: Segoe UI, system-ui;
+            background: linear-gradient(135deg, rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)), url("/static/forest_flame.jpg") center / cover no-repeat fixed;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .card {
+            background: rgba(255, 255, 255, .15);
+            backdrop-filter: blur(18px);
+            padding: 40px;
+            border-radius: 25px;
+            width: 420px;
+        }
+        
+        select,
+        button {
+            width: 100%;
+            padding: 16px;
+            border-radius: 14px;
+            border: none;
+            font-size: 16px;
+            margin-top: 15px;
+        }
+        
+        button {
+            background: linear-gradient(135deg, #ff6d00, #ff1744);
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        
+        .history {
+            margin-top: 30px;
+            font-size: 14px;
+        }
+        
+        .history h4 {
+            margin-bottom: 10px;
+            opacity: 0.85;
+        }
+        
+        .history-item {
+            background: rgba(255, 255, 255, .2);
+            padding: 10px 12px;
+            border-radius: 10px;
+            margin-bottom: 8px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="card">
+        <h1 style="
+    margin: 0;
+    font-size: 32px;
+    letter-spacing: 0.5px;
+">
+            🌲 Forest Flame
+        </h1>
+
+        <p style="
+    margin-top: 8px;
+    margin-bottom: 26px;
+    font-size: 15px;
+    line-height: 1.5;
+    opacity: 0.85;
+">
+            Early wildfire risk awareness using real-time weather conditions.<br> Helping protect forests, wildlife, and communities.
+        </p>
+
+
+        <form method="POST" action="/predict">
+            <select name="area" required>
+<option value="">🌲 Select Forest Area</option>
+{% for forest in forests %}
+<option value="{{ forest }}">{{ forest }}</option>
+{% endfor %}
+</select>
+
+            <button type="submit">Analyze Risk</button>
+        </form>
+
+        <!-- ===== MINI HISTORY ===== -->
+        {% if recent %}
+        <div class="history">
+            <h4>📊 Recent Predictions</h4>
+
+            {% for item in recent %}
+            <div class="history-item">
+                🌲 {{ item.area }} <br> 🔥 {{ item.prediction }} <br> ⏱ {{ item.timestamp }}
+            </div>
+            {% endfor %}
+        </div>
+        {% endif %}
+
+    </div>
+</body>
+
+</html>

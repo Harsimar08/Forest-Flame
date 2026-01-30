@@ -1,0 +1,158 @@
+/* General Reset & Body Styling */
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient( to bottom right, rgba(34, 139, 34, 0.7), rgba(255, 140, 0, 0.6), rgba(255, 69, 0, 0.7)), url('forest_flame.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: #2e2e2e;
+    text-align: center;
+    padding: 50px 20px;
+    margin: 0;
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+}
+
+
+/* Container Styling */
+
+.container {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 45px 35px;
+    border-radius: 20px;
+    display: inline-block;
+    max-width: 550px;
+    width: 90%;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.container:hover {
+    transform: scale(1.02);
+    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.25);
+}
+
+
+/* Inputs & Buttons */
+
+input,
+button {
+    padding: 14px 20px;
+    margin: 14px 0;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 16px;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+}
+
+input:focus {
+    outline: none;
+    border-color: #ff6b00;
+    box-shadow: 0 0 10px rgba(255, 107, 0, 0.5);
+}
+
+button {
+    background: linear-gradient(to right, #ff6b00, #ff8c00);
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background: linear-gradient(to right, #e55a00, #ff6f20);
+    transform: translateY(-2px);
+}
+
+
+/* Headings */
+
+h1,
+h2 {
+    color: #2f4f1f;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.15);
+    margin-bottom: 15px;
+}
+
+
+/* Stat Card Styling */
+
+.stats {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 35px;
+    gap: 20px;
+}
+
+.card {
+    background: #ffffff;
+    border-left: 6px solid #ff6b00;
+    padding: 20px;
+    border-radius: 15px;
+    flex: 1 1 45%;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.card h2 {
+    margin: 0 0 8px;
+    font-size: 19px;
+    color: #2e2e2e;
+}
+
+.card p {
+    font-size: 26px;
+    font-weight: bold;
+    color: #ff6b00;
+}
+
+
+/* Chart Section */
+
+.chart {
+    margin-top: 40px;
+}
+
+
+/* Risk Level Table Rows */
+
+.high-risk {
+    background: #ff4f00;
+    color: white;
+    font-weight: bold;
+}
+
+.moderate-risk {
+    background: #ffb347;
+    color: #222;
+    font-weight: bold;
+}
+
+.low-risk {
+    background: #4CAF50;
+    color: white;
+    font-weight: bold;
+}
+
+
+/* Responsive Tweak */
+
+@media (max-width: 600px) {
+    .stats {
+        flex-direction: column;
+        align-items: center;
+    }
+    .card {
+        width: 90%;
+    }
+}

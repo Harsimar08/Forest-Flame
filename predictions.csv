@@ -1,0 +1,17 @@
+area,temperature,humidity,wind,prediction,timestamp
+Northern Ridge Forest ,35.0,88.0,8.0,Moderate Risk,2025-05-05 00:11:03
+Uttarakhand � Pine Forests,40.0,20.0,10.0,High Risk,2025-05-05 00:12:21
+Kaziranga National Park (Assam) ,20.0,87.0,10.0,Low Risk,2025-05-05 00:18:39
+"Silent Valley National Park (Kerala, Western Ghats)",19.0,78.0,8.0,Low Risk,2025-05-05 00:23:05
+"Simlipal Forest, Odisha",38.0,78.0,8.0,Moderate Risk,2025-05-05 00:34:32
+"Simlipal Forest, Odisha",40.0,40.0,8.0,Moderate Risk,2025-05-05 00:36:49
+"Simlipal Forest, Odisha",40.0,12.0,8.0,High Risk,2025-05-05 00:38:30
+"Simlipal Forest, Odisha",40.0,12.0,8.0,High Risk,2025-09-18 22:25:37
+Delhi,0.1,76,7.39,Low Risk,2026-01-17 13:58:25
+Mumbai,30.3,49,5.31,Moderate Risk,2026-01-17 13:58:50
+Corbett,19.9,67,4.89,Low Risk,2026-01-17 14:01:55
+Delhi,0.2,76,7.39,Low Risk,2026-01-17 14:15:50,"{'temperature': 0.9, 'humidity': 40.2, 'wind': 58.9}"
+New Delhi,23.2,29,1.0,Low Risk,2026-01-17 14:16:13,"{'temperature': 43.7, 'humidity': 52.7, 'wind': 3.5}"
+Delhi,-13.9,66,4.5,Low Risk,2026-01-29 19:59:59,"{'temperature': -175.4, 'humidity': 168.9, 'wind': 106.5}"
+Jim Corbett National Park,8.7,90,1.31,Low Risk,2026-01-29 20:46:14,"{'temperature': 57.7, 'humidity': 26.1, 'wind': 16.2}"
+Sundarbans Forest,21.4,60,1.69,Low Risk,2026-01-29 20:46:40,"{'temperature': 53.1, 'humidity': 39.1, 'wind': 7.9}"
