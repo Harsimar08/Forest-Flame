@@ -26,6 +26,7 @@
         }
         
         select,
+        input,
         button {
             width: 100%;
             padding: 16px;
@@ -35,11 +36,22 @@
             margin-top: 15px;
         }
         
+        input {
+            background: rgba(255, 255, 255, 0.92);
+        }
+        
         button {
             background: linear-gradient(135deg, #ff6d00, #ff1744);
             color: white;
             font-weight: bold;
             cursor: pointer;
+        }
+        
+        .divider {
+            text-align: center;
+            margin: 18px 0;
+            opacity: 0.75;
+            font-size: 13px;
         }
         
         .history {
@@ -63,37 +75,36 @@
 
 <body>
     <div class="card">
-        <h1 style="
-    margin: 0;
-    font-size: 32px;
-    letter-spacing: 0.5px;
-">
+
+        <!-- TITLE -->
+        <h1 style="margin:0;font-size:32px;letter-spacing:.5px;">
             🌲 Forest Flame
         </h1>
 
-        <p style="
-    margin-top: 8px;
-    margin-bottom: 26px;
-    font-size: 15px;
-    line-height: 1.5;
-    opacity: 0.85;
-">
+        <p style="margin-top:8px;margin-bottom:26px;font-size:15px;line-height:1.5;opacity:.85;">
             Early wildfire risk awareness using real-time weather conditions.<br> Helping protect forests, wildlife, and communities.
         </p>
 
-
+        <!-- FORM -->
         <form method="POST" action="/predict">
-            <select name="area" required>
-<option value="">🌲 Select Forest Area</option>
-{% for forest in forests %}
-<option value="{{ forest }}">{{ forest }}</option>
-{% endfor %}
-</select>
+
+            <!-- FOREST DROPDOWN -->
+            <select name="area">
+                <option value="">🌲 Select Forest Area</option>
+                {% for forest in forests %}
+                <option value="{{ forest }}">{{ forest }}</option>
+                {% endfor %}
+            </select>
+
+            <div class="divider">— OR —</div>
+
+            <!-- CUSTOM LOCATION INPUT -->
+            <input type="text" name="custom_location" placeholder="📍 Enter any location (city / village / forest)">
 
             <button type="submit">Analyze Risk</button>
         </form>
 
-        <!-- ===== MINI HISTORY ===== -->
+        <!-- MINI HISTORY -->
         {% if recent %}
         <div class="history">
             <h4>📊 Recent Predictions</h4>
