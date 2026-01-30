@@ -1,0 +1,13 @@
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+env/
+venv/
+.idea/
+.vscode/
+*.DS_Store
+
+# Ignore model artifacts if you don't want to push larger files
+# Uncomment if needed
+# model/
